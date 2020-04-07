@@ -1,0 +1,147 @@
+html {
+    font-family: 'Amatic SC', cursive;
+}
+
+header {
+    background-color: #61E786;
+}
+
+p {
+    margin: 0em;
+    padding: 0%;
+}
+
+h1 {
+    position: relative;
+    left: 400px;
+    vertical-align: auto;
+    font-family: 'Amatic SC', cursive;
+    margin: auto;
+}
+
+h2 {
+    margin: 0px;
+}
+
+nav {
+    overflow: hidden;
+    background-color: #48438C;
+    clear: left;
+    font-family: 'Amatic SC', cursive;
+  }
+
+nav a {
+    float: left;
+    display: block;
+    color: #EDFFEC;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #EDFFEC;
+    color: black;
+}
+
+
+header input[type="text"] {
+    position: relative;
+    left: 275px;
+    height: 35px;
+    width: 500px;
+    margin-bottom: 15px;
+}
+
+.entry p {
+    font-weight: bold;
+    font-size: 16pt;
+}
+
+.entry a {
+    background-color: #48435C;
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 0.75em;
+    margin-top: 2em;
+    position: relative;
+    left: 50px;
+}
+
+.review-entry {
+    border-top: 1px solid #48435C;
+    margin-bottom: 20px;
+}
+
+#logo {
+    float: left;
+    height: 125px;
+}
+
+#search {
+    position: relative;
+    left: 275px;
+    top: 15px;
+    height: 40px;
+    background-color: transparent;
+}
+
+#right-sidebar {
+    float: right;
+    width: 200px;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+
+#product-img {
+    float: left;
+    height: 300px;
+    position: relative;
+    left: -50px;
+}
+
+#reviews {
+    clear: both;
+}
+
+footer {
+    background-color: #48438C;
+    float: left;
+    clear: left;
+    margin: 2em;
+    width: 96%;
+}
+
+footer a {
+    float: left;
+    display: block;
+    color: #EDFFEC;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 16px;
+}
+footer a:hover {
+    background-color: #5A5766;
+    color: #EDFFEC;
+}
+
+#left-sidebar {
+    width: 200px;
+    float: left;
+    margin: 20px;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+#left-sidebar p {
+    font-weight: bold;
+}
+
+#left-sidebar .criteria {
+    margin-bottom: 10px;
+}
+
+#personal-info {
+    clear: both;
+}

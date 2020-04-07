@@ -1,0 +1,139 @@
+
+html {
+    background-color: #EDFFEC;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header {
+    background-color: #61E786;
+}
+p {
+    margin: 0em;
+    padding: 0%;
+}
+h1 {
+    position: relative;
+    left: 400px;
+    vertical-align: auto;
+    font-family: 'Amatic SC', cursive;
+    margin: auto;
+}
+nav {
+    overflow: hidden;
+    background-color: #48438C;
+    clear: left;
+    font-family: 'Amatic SC', cursive;
+}
+nav a {
+    float: left;
+    display: block;
+    color: #EDFFEC;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 16px 16px;
+    text-decoration: none;
+}
+nav a:hover {
+    background-color: #EDFFEC;
+    color: black;
+}
+header input[type="text"] {
+    position: relative;
+    left: 275px;
+    height: 35px;
+    width: 500px;
+    margin-bottom: 15px;
+}
+table a {
+    float: left;
+    display: block;
+    color: #EDFFEC;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+}
+table a:hover {
+    background-color: #5A5766;
+    color: #EDFFEC;
+}
+#logo {
+    float: left;
+    height: 125px;
+}
+#search {
+    position: relative;
+    left: 275px;
+    top: 15px;
+    height: 40px;
+    background-color: transparent;
+}
+h3 {
+    text-align: center;
+}
+#left-sidebar {
+    position: absolute;
+    background-color: #62E786;
+    float: left;
+    margin: 2em;
+    width: 15em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+    overflow: auto;
+    justify-content: center;
+}
+#center {
+    margin-left: 25em;
+    margin-right: 2em;
+}
+.trend-graph {
+    justify-content: center;
+}
+.image {
+    padding: 1em;
+    background-color: #48438C;
+}
+.product-tile {
+    background-color: #9792E3;
+    float: left;
+    display: inline;
+    margin: 1em;
+    padding: 1em;
+    max-width: 15em;
+    height: 26em;
+}
+tbody {
+    width: 10em;
+
+}
+caption {
+    font-weight: bold;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+.price {
+    text-align: right;
+    color: #EDFFEC;
+}
+.store {
+    padding-right: 5em;
+}
+footer {
+    background-color: #48438C;
+    float: left;
+    clear: left;
+    margin: 2em;
+    width: 96%;
+}
+footer a {
+    float: left;
+    display: block;
+    color: #EDFFEC;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    padding: 16px 16px;
+}
+footer a:hover {
+    background-color: #5A5766;
+    color: #EDFFEC;
+}

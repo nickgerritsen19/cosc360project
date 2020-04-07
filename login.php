@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>My Grocery Tracker</title>
+        <link rel="stylesheet" href="css/home.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.3.1.js"> </script>
+        <script type="text/javascript" src="script/prevalidation.js"></script>
+        <script> 
+            $(function(){
+            $("#header").load("header.html"); 
+            $("#footer").load("footer.html"); 
+            });
+        </script> 
+    </head>
+    <body>
+        <header id="header"></header>
+        
+        <main>
+        <form method="POST" id="mainForm" action="validate.php">
+                <fieldset>
+                    <legend>Log In</legend>
+                    <p>
+                        <label>Username:</label></br>
+                        <input type="text" class="required" name="username"/>
+                    </p>
+                    <p>
+                        <label>Password:</label></br>
+                        <input type="password" class="required" name="password"/>
+                    </p>
+                    <p>
+                        <input type="submit">
+                        <input type="reset">
+                    </p>
+                </fieldset>
+            </form>
+            <?php
+
+            ?>
+        </main>
+
+        <footer id="footer"></footer>
+    </body>
+</html>
