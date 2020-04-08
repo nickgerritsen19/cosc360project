@@ -137,3 +137,16 @@ footer a:hover {
     background-color: #5A5766;
     color: #EDFFEC;
 }
+
+.success {
+    color: green;
+}
+
+.fail {
+    color: red;
+}
+
+#adminToggle {
+    width: 20em;
+    margin: 1em;
+}
