@@ -10,10 +10,19 @@
         <a href="#categories">Categories</a>
         <a href="#best-deals">Best Deals</a>
         <a href="#about-us">About Us</a>
-        <a href="#admin">Admin</a>
         <?php
             session_start();
             if($_SESSION['loggedIn'] == true) {
+                require_once("db_connect.php");
+                $sql = "SELECT adminid FROM admins WHERE username = ?";
+                $stmt = $conn->prepare($sql);
+                $stmt->bind_param("s", $_SESSION['username']);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                if($result->num_rows === 1)
+                    printf("<a href=\"adminportal.php\">Admin Portal</a>");
+                $stmt->close();
+                $conn->close();
                 printf("<a href=\"userprofile.php\">%s</a>",$_SESSION['username']);
                 printf("<a href=\"signout.php\">Sign Out</a>");
             }else {
