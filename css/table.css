@@ -1,0 +1,17 @@
+table {
+    border: solid 1pt black;
+    /*border-collapse: collapse;*/
+    margin: 1em;
+}
+
+thead {
+    text-align: left;
+}
+
+tfoot {
+    font-weight: bold;
+}
+
+td {
+    border: solid 1pt black;
+}
