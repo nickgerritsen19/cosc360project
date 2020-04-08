@@ -14,7 +14,7 @@
         <?php
             session_start();
             if($_SESSION['loggedIn'] == true) {
-                printf("<a href=\"userprofile.html\">%s</a>",$_SESSION['username']);
+                printf("<a href=\"userprofile.php\">%s</a>",$_SESSION['username']);
                 printf("<a href=\"signout.php\">Sign Out</a>");
             }else {
                 echo '<a href="login.html">Log In</a>';
