@@ -14,12 +14,13 @@
             session_start();
             if($_SESSION['loggedIn'] == true) {
                 require_once("db_connect.php");
-                $sql = "SELECT adminid FROM admins WHERE username = ?";
+                $sql = "SELECT isAdmin FROM users WHERE username = ?";
                 $stmt = $conn->prepare($sql);
                 $stmt->bind_param("s", $_SESSION['username']);
                 $stmt->execute();
                 $result = $stmt->get_result();
-                if($result->num_rows === 1)
+                $row = $result->fetch_assoc();
+                if($row['isAdmin'])
                     printf("<a href=\"adminportal.php\">Admin Portal</a>");
                 $stmt->close();
                 $conn->close();
