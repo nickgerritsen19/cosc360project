@@ -31,7 +31,11 @@
 <tr>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><input type=”submit” name=”Submit” value=”Send”> <input type=”reset” name=”Submit2″ value=”Reset”></td>
+<td> <p>
+    <input type=”submit”> 
+    <input type=”reset”>
+</p>
+</td>
 </tr>
 </table>
 </form>
