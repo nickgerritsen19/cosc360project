@@ -8,7 +8,7 @@ $message=$_REQUEST[‘detail’];
 $mail_from=$_REQUEST[‘customer_mail’];
 $name=$_REQUEST[‘name’];
 // From
-//$header=”from: $name <$mail_from>”;
+$header=”from: $name <$mail_from>”;
 // Enter your email address
 $to =$_REQUEST[‘customer_mail’];
 $send_contact=mail($to,$subject,$message);
