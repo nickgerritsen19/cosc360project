@@ -42,8 +42,9 @@
                 while($row = $result->fetch_assoc()) {
                     echo '<article class="product-tile">';
                         $productname = $row['productname'];
+                        $productid = $row['productid'];
                         printf("<h3>%s</h3>",$productname);
-                        printf("<a href=product.php?product=%s><img class=\"image\" src=\"%s\" alt=\"%s\" width=\"200\"></a>",$productname,$row['imageURL'],$productname);
+                        printf("<a href=product.php?productid=%s><img class=\"image\" src=\"%s\" alt=\"%s\" width=\"200\"></a>",$productid,$row['imageURL'],$productname);
                         printf("<p>%s</p>",$row['description']);
                         echo "<table class=\"price-table\">
                                 <caption>Best Deals</caption>
