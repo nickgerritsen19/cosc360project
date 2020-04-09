@@ -104,6 +104,7 @@ header input[type="text"] {
 
 #reviews {
     clear: both;
+    padding: 4em;
 }
 
 footer {

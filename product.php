@@ -18,13 +18,9 @@
             require_once("db_connect.php");
             $sql = "SELECT * FROM products WHERE productid = ?";
             $stmt = $conn->prepare($sql);
-            $stmt = $conn->prepare($sql);
             $stmt->bind_param("s", $_GET['productid']);
             $stmt->execute();
             $result = $stmt->get_result();
-
-            $stmt->close();
-            $conn->close();
 
             $row = $result->fetch_assoc();
             $productname = $row['productname'];
@@ -60,9 +56,44 @@
                 <p><?php echo $description;?></p>
             </div>
 
-            <!-- TODO: dynamically generate reviews from DB -->
             <section id="reviews">
                 <h2>Reviews</h2>
+                <?php
+                    $sql = "SELECT * FROM reviews WHERE productid = ?";
+                    $stmt = $conn->prepare($sql);
+                    $stmt->bind_param("s", $_GET['productid']);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+        
+                    $stmt->close();
+                    $conn->close();
+                    if ($result->num_rows > 0) {
+                        while($row = $result->fetch_assoc()) {
+                            $username = $row['username'];
+                            $content = $row['reviewcontent'];
+                            $title = $row['reviewtitle'];
+                            $rating = $row['rating'];
+                            $reviewdate = $row['reviewdate'];
+                            $ratingstring = '';
+                                
+                            echo '<article class="review-entry">';
+                                echo '<p>';
+                                for($i = 0; $i < $rating; $i++){
+                                    echo '★';
+                                }
+                                for($i = $rating; $i < 5; $i++){
+                                    echo '☆';
+                                }
+                                echo ' '.$title.'</p>';
+                                echo '<p>Reviewed on '.$reviewdate.'</p></br>';
+                                echo '<p>'.$content.'</p>';
+                            echo '</article>';
+                        }
+                    } else {
+                        echo '<p>There are no reviews for this product yet!</p>';
+                    }
+
+                ?>
                 <article class="review-entry">
                     <p>★★★★☆ This is the best lettuce I've ever had!!</p>
                     <p>Reviewed on January 31st, 2019</p></br>
