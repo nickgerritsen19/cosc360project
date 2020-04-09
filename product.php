@@ -104,6 +104,12 @@
                     <p>Reviewed on January 31st, 2019</p></br>
                     <p>I don't know what kind of joke they are trying to pull, but I do not appreicate it. 0 stars and I would be liking my money back.</p>
                 </article>
+                <?php
+                    session_start();
+                    if($_SESSION['loggedIn'] ==true) {
+                        printf("<h2> <a href=\"submitreview.html\">Leave a Review</a></h2>");
+                    }
+                ?>
             </section>
         </main>
 
