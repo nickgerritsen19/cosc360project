@@ -21,6 +21,8 @@
         <link rel="stylesheet" href="css/table.css"/>
         <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.js"> </script>
+        <script type="text/javascript" src="script/productprevalidation.js"></script>
+        
         <script> 
             $(function(){
             $("#header").load("header.php"); 
@@ -58,11 +60,19 @@
                     echo "<p>Your website has no users! (This should be impossible...)</p>";
                 }
             ?>
+            <?php
+                //Return form results
+                if (isset($_GET['success']) && $_GET['success'] == 1)
+                    printf("<p class='success'>%s</p>",$_SESSION['msg']);
+                else if (isset($_GET['success']) && $_GET['success'] == 0)
+                    printf("<p class='fail'>%s</p>",$_SESSION['msg']);
+                $_SESSION['msg'] = null;
+            ?>
             <form method="POST" id="adminToggle" action="grantadmin.php">
                 <fieldset>
                     <legend>Grant Administration Permissions</legend>
                     <p>
-                        <input type="text" class="required" name="username" placeholder="Username"/>
+                        <input type="text" name="username" placeholder="Username"/>
                     </p>
                     <p>
                         <input type="submit">
@@ -74,7 +84,7 @@
                 <fieldset>
                     <legend>Revoke Administration Permissions</legend>
                     <p>
-                        <input type="text" class="required" name="username" placeholder="Username"/>
+                        <input type="text" name="username" placeholder="Username"/>
                     </p>
                     <p>
                         <input type="submit">
@@ -82,14 +92,40 @@
                     </p>
                 </fieldset>
             </form>
-            <?php
-                //Return form results
-                if (isset($_GET['success']) && $_GET['success'] == 1)
-                    printf("<p class='success'>%s</p>",$_SESSION['msg']);
-                else if (isset($_GET['success']) && $_GET['success'] == 0)
-                    printf("<p class='fail'>%s</p>",$_SESSION['msg']);
-                $_SESSION['msg'] = null;
-            ?>
+
+            <form method="POST" id="addProduct" enctype="multipart/form-data" action="addProduct.php">
+                <fieldset>
+                    <legend>Add New Product</legend>
+                    <p>
+                        <label>Product Name:</label></br>
+                        <input type="text" class="required" name="productname" placeholder="Name"/>
+                    </p>
+                    <p>
+                        <label>Product Image:</label></br>
+                        <input type="file" class="required" name="productimage"/>
+                    </p>
+                    <p>
+                        <label>Description:</label></br>
+                        <textarea class="required" name="description" placeholder="Enter Description Here"></textarea>
+                    </p>
+                    <p>
+                        <label>Save On Foods Price:</label></br>
+                        <input type="text" class="required" name="saveonprice" placeholder="Price"/>
+                    </p>
+                    <p>
+                        <label>Superstore Price:</label></br>
+                        <input type="text" class="required" name="superstoreprice" placeholder="Price"/>
+                    </p>
+                    <p>
+                        <label>Walmart Price:</label></br>
+                        <input type="text" class="required" name="walmartprice" placeholder="Price"/>
+                    </p>
+                    <p>
+                        <input type="submit">
+                        <input type="reset">
+                    </p>
+                </fieldset>
+            </form>
         </main>
 
         <footer id="footer"></footer>
