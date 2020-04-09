@@ -16,7 +16,7 @@
     $stmt->close();
     $conn->close();
 
-    $newURL = "home.html";
+    $newURL = "home.php";
 
     //Redirect.
     header('Location: '.$newURL);

@@ -1,4 +1,4 @@
-<a href="home.html"><img id="logo" src="images/Logo.jpg" alt="Logo"></a>
+<a href="home.php"><img id="logo" src="images/Logo.jpg" alt="Logo"></a>
 <h1>Lettuce Get Some Deals</h1>
 <form method="GET" action="">
 <input type="text" size="100" name="search" placeholder="Search Here"/>
