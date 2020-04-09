@@ -29,7 +29,7 @@
                 //user is found, set session variable and redirect
                 $_SESSION['username'] = $username;
                 $_SESSION['loggedIn'] = true;
-                header('Location: home.html');
+                header('Location: home.php');
             }else{
                 $_SESSION['errMsg'] = "<p style='color:red' align='center'> Invalid username/password! </p>";
                 //username and password combo do not exist

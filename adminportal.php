@@ -9,7 +9,7 @@
     $result = $stmt->get_result();
     $row = $result->fetch_assoc();
     if(!$row['isAdmin'])
-        header('Location: home.html');
+        header('Location: home.php');
 ?>
 
 <!DOCTYPE html>
