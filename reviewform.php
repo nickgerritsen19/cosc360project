@@ -29,13 +29,14 @@
                             $stmt->bind_param("s", $_GET['productname']);
                             $stmt->execute();
                             $result = $stmt->get_result();
-                            $stmt->close();
-                            $conn->close();
+                            
                             while($row = $result->fetch_assoc()) {
                                 unset($productname);
                                 $productname = $row['productname']
                                 echo '<option value="'.$productname.'" >'.$productname.'</option>';
                             }
+                            $stmt->close();
+                            $conn->close();
                             ?> 
                         </select>
                     </p>
