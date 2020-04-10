@@ -99,7 +99,7 @@
                     if($_SESSION['loggedIn'] ==true) {
                         printf("<h2> <a href=\"submitreview.html\">Leave a Review</a></h2>");
                     } else {
-                        printf("<h2><a href=\"login.html\">Log In</a></h2>");
+                        printf("<h2><a href=\"login.html\">Log In to Leave a Review</a></h2>");
                     }
                 ?>
             </section>
