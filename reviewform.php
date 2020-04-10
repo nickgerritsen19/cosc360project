@@ -25,7 +25,7 @@
                         <select name="productid">
                             <?php
                             require_once("db_connect.php");
-                            $sql = "SELECT productname FROM products";
+                            $sql = "SELECT productname, productid FROM products";
                             $stmt = $conn->prepare($sql);
                             $stmt->bind_param("s", $_GET['productname']);
                             $stmt->execute();
@@ -34,7 +34,7 @@
                             while($row = $result->fetch_assoc()) {
                                 unset($productname);
                                 $productname = $row['productname'];
-                                echo '<option value="'.$productname.'" >'.$productname.'</option>';
+                                echo '<option value="'.$productid.'" >'.$productname.'</option>';
                             }
                             $stmt->close();
                             $conn->close();
