@@ -33,7 +33,6 @@
                             
                             while($row = $result->fetch_assoc()) {
                                 unset($productname);
-                            
                                 $productname = $row['productname'];
                                 $productid = $row['productid'];
                                 echo '<option value="'.$productid.'" >'.$productname.'</option>';
@@ -49,7 +48,7 @@
                     </p>
                     <p>
                         <label>Review</label></br>
-                        <textarea class="required" name="review" cols="75%" rows="5%" ></textarea>
+                        <textarea class="required" name="reviewcontent" cols="75%" rows="5%" ></textarea>
                     </p>    
                     <p>
                             <label>Rating</label></br>
