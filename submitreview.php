@@ -20,7 +20,7 @@
         $stmt->close();
         $conn->close();
         
-        $newURL = "product.html";
+        $newURL = "product.php";
     
         header('Location: '.$newURL);
 
