@@ -94,16 +94,6 @@
                     }
 
                 ?>
-                <article class="review-entry">
-                    <p>★★★★☆ This is the best lettuce I've ever had!!</p>
-                    <p>Reviewed on January 31st, 2019</p></br>
-                    <p>I bought this lettuce and it actually tasted like candy! I've never tried it before, but I think I will continue to order this because it is delicious. Did find it kind of weird that it came in a plastic bag labelled "Spearment Leaves". Only gave it 4 stars because it came two months late.</p>
-                </article>
-                <article class="review-entry">
-                    <p>☆☆☆☆☆ I ordered romaine lettuce and they sent me spearmint leaves. WTF!?</p>
-                    <p>Reviewed on January 31st, 2019</p></br>
-                    <p>I don't know what kind of joke they are trying to pull, but I do not appreicate it. 0 stars and I would be liking my money back.</p>
-                </article>
                 <?php
                     session_start();
                     if($_SESSION['loggedIn'] ==true) {
