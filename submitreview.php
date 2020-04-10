@@ -9,13 +9,15 @@
         $result = $stmt->get_result();
         $username = $result->fetch_assoc();
 
-        $review = $_POST["review"];    
+
+        $reviewtitle = $_POST["reviewtitle"]
+        $review = $_POST["reviewcontent"];    
         $rating = $_POST["rating"];
         $productid = $_POST["productid"];
     
-        $sql = "INSERT INTO reviews (username, reviewcontent, rating, productid) VALUES (?,?,?,?)";
+        $sql = "INSERT INTO reviews (username, reviewtitle, reviewcontent, rating, productid) VALUES (?,?,?,?,?)";
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("ssss", $username, $review, $rating, $productid);
+        $stmt->bind_param("ssss", $username, $reviewtitle, $reviewcontent, $rating, $productid);
         $stmt->execute();
         $stmt->close();
         $conn->close();
