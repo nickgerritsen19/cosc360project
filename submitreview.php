@@ -6,7 +6,8 @@
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $_SESSION["username"]);
         $stmt->execute();
-        $username = $stmt->get_result();
+        $result = $stmt->get_result();
+        $username = $result->fetch_assoc();
 
         $review = $_POST["review"];    
         $rating = $_POST["rating"];
@@ -23,5 +24,7 @@
     
         header('Location: '.$newURL);
 
+    } else {
+        prinf("<p>Must be signed in to leave a review</p>");
     }
 ?>
