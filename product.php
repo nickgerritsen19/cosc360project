@@ -98,7 +98,9 @@
                     session_start();
                     if($_SESSION['loggedIn'] ==true) {
                         printf("<h2> <a href=\"submitreview.html\">Leave a Review</a></h2>");
-                    } else {}
+                    } else {
+                        printf("<h2><a href=\"login.html\">Log In</a></h2>");
+                    }
                 ?>
             </section>
         </main>
