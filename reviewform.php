@@ -27,13 +27,15 @@
                             require_once("db_connect.php");
                             $sql = "SELECT productname, productid FROM products";
                             $stmt = $conn->prepare($sql);
-                            $stmt->bind_param("s", $_GET['productname']);
+                            $stmt->bind_param("ss", $_GET['productname'], $_GET['productid']);
                             $stmt->execute();
                             $result = $stmt->get_result();
                             
                             while($row = $result->fetch_assoc()) {
                                 unset($productname);
+                            
                                 $productname = $row['productname'];
+                                $productid = $row['productid'];
                                 echo '<option value="'.$productid.'" >'.$productname.'</option>';
                             }
                             $stmt->close();
